@@ -1,0 +1,16 @@
+@import '../abstracts/_variables';
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.navlink {
+    &__element {
+        color: $main-color;
+    }
+    &__element:hover {
+        color: $black-color;
+    }
+}
