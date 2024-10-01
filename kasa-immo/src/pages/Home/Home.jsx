@@ -1,9 +1,11 @@
 import React from "react";
-import '../../styles/pages/_home.scss'
+import Banner from "../../components/Banner/Banner";
+import '../../styles/pages/_home.scss';
 
 function Home() {
     return (
         <div className="home">
+            <Banner />
             <h1>Hello Home</h1>
         </div>
     )

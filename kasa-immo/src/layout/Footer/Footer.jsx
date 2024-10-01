@@ -1,4 +1,4 @@
-import LogoIcon from '../../components/LogoIcon';
+import LogoIcon from '../../components/LogoIcon/LogoIcon';
 import '../../styles/layout/_footer.scss'
 
 function Footer() {
