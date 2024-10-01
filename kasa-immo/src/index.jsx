@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './index.css';
+import './styles/main.scss'
 import reportWebVitals from './reportWebVitals';
 
-import Layout from './components/Layout/Layout'
+import Layout from './layout/Layout/Layout'
 
 import Home from './pages/Home/Home';
 import About from './pages/About/About';

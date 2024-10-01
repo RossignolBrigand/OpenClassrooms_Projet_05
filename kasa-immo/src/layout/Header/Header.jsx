@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import '../../assets/logo-kasa.png';
-import '../../styles/components/_header.scss'
+import '../../styles/layout/_header.scss'
 
 function Header() {
     return (
