@@ -3,18 +3,18 @@
 .header {
     display: flex;
     flex-direction: row;
-    margin: 45px 50px 50px 50px;
+    margin: 45px 100px 50px 100px;
     justify-content: space-between;
     align-items: center;
 }
 
 .logoIcon {
-    width: 20%;
     fill: $primary-color;
 }
 
 .navbar__navlink {
-    padding-left: 10px;
+    padding-left: 60px;
+    font-weight: 500;
     font-size: 1.5em;
 
     &:hover {
