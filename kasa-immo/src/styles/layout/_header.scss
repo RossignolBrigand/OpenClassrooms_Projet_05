@@ -1,8 +1,20 @@
 .header {
     display: flex;
     flex-direction: row;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin: 40px;
     justify-content: space-between;
+}
+
+.navbar__navlink {
+    padding-left: 10px;
+    font-size: 1.5em;
+
+    &:hover {
+        text-decoration: underline 2px;
+    }
+
+    &:last-child {
+        padding-right: 0;
+    }
+
 }
