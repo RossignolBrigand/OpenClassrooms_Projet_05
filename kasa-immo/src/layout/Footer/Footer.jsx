@@ -1,7 +1,12 @@
+import LogoIcon from '../../components/LogoIcon';
+import '../../styles/layout/_footer.scss'
 
 function Footer() {
     return (
-        <h1>I am a Footer</h1>
+        <footer className='footer'>
+            <LogoIcon />
+            <p className='footer__content'>© 2020 Kasa. All rights reserved</p>
+        </footer>
     )
 }
 

@@ -1,8 +1,9 @@
 import React from "react";
+import '../../styles/pages/_home.scss'
 
 function Home() {
     return (
-        <div>
+        <div className="home">
             <h1>Hello Home</h1>
         </div>
     )
