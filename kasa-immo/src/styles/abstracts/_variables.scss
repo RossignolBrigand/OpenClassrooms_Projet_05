@@ -1,17 +1,33 @@
-/// Fonts ///
-///
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
-/// Colors ///
-/// 
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
-// Primary color
+
+
+
+
+
+
+/// Primary color ///
+/// @type Color
 $primary-color: #FF6060;
 
-// Light Gray
+/// Light Gray
+/// @type Color
+$color-light-gray: #F6F6F6;
 
-// Darker Gray
+/// Darker Gray
+/// @type Color
+$color-dark-gray: #C4C4C4;
 
-// Black 
+/// Black
+/// @type Color
 $color-black: #000000;
-// White 
+
+/// White
+/// @type Color 
 $color-white: #FFFFFF;
