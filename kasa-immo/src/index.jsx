@@ -8,11 +8,13 @@ import Error from './pages/Error/Error';
 
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import Header from './components/Header/Header';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
+      <Header/>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/about' element={<About/>}></Route>
