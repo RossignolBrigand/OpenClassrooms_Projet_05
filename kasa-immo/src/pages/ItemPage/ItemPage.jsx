@@ -16,3 +16,5 @@ function ItemPage(props) {
 ItemPage.propTypes = {
     id: "number"
 }
+
+export default ItemPage;

@@ -7,6 +7,7 @@ function Home() {
         <div className="home">
             <Banner />
             <h1>Hello Home</h1>
+
         </div>
     )
 }
