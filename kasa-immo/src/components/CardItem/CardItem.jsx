@@ -4,11 +4,16 @@ import PropTypes from 'prop-types';
 import '../../styles/components/_cardItem.scss'
 
 function CardItem({ id, title }) {
+
     return (
-        <div className='card-wrapper'>
-            <h2>{title}</h2>
-            <Link to={`/item/${id}`}>Voir plus</Link>
-        </div>
+        <Link to={`/item/${id}`}>
+            <div className='card-wrapper'>
+                <div className='card-wrapper__gradient'>
+                    <img className='card-wrapper__img' src={'../../assets/covers/Cover2.png'} alt=''></img>
+                </div>
+                <h2 className='card-wrapper__content'>Titre de la location : {title}</h2>
+            </div>
+        </Link>
     );
 }
 
