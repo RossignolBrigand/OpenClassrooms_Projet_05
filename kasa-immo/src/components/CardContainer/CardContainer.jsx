@@ -1,9 +1,11 @@
 import React from "react";
 
+import '../../styles/components/_cardContainer.scss'
+
 function CardContainer({ children }) {
 
     return (
-        <div>
+        <div className="cards-container">
             {children}
         </div>
     )

@@ -14,7 +14,7 @@ function ItemPage(props) {
 }
 
 ItemPage.propTypes = {
-    id: "number"
+    id: PropTypes.string
 }
 
 export default ItemPage;
