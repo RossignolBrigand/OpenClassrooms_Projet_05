@@ -14,13 +14,13 @@ function Home() {
         <div className="home">
             <Banner />
             <CardGallery>
-                {console.log(LogementsData)}
-                <CardItem id="4" title="Best number" />
-                <CardItem id="4" title="Best number" />
-                <CardItem id="4" title="Best number" />
-                <CardItem id="4" title="Best number" />
-                <CardItem id="4" title="Best number" />
-                <CardItem id="4" title="Best number" />
+                {LogementsData.map((logement) => (
+                    <CardItem
+                        key={logement.id}
+                        title={logement.title}
+                        cover={logement.cover}
+                    />
+                ))}
             </CardGallery>
         </div>
     )

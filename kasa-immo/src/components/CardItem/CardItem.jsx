@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 
 import '../../styles/components/_cardItem.scss'
 
-function CardItem({ id, title }) {
+function CardItem({ id, title, cover }) {
 
     return (
-        <Link to={`/item/${id}`}>
+        <Link to={`/item/${id}`} key={`${id}-${title}`}>
             <div className='card-wrapper'>
                 <div className='card-wrapper__gradient'>
-                    <img className='card-wrapper__img' src={'../../assets/covers/Cover2.png'} alt=''></img>
+                    <img className='card-wrapper__cover' src={cover} alt=''></img>
                 </div>
-                <h2 className='card-wrapper__content'>Titre de la location : {title}</h2>
+                <h2 className='card-wrapper__content'>{title}</h2>
             </div>
         </Link>
     );
@@ -19,7 +19,8 @@ function CardItem({ id, title }) {
 
 CardItem.propTypes = {
     id: PropTypes.string,
-    title: PropTypes.string
+    title: PropTypes.string,
+    cover: PropTypes.string
 }
 
 export default CardItem;

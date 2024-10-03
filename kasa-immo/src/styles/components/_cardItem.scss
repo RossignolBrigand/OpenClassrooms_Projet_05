@@ -18,11 +18,16 @@
         border-radius: inherit;
     }
 
-    &__img {
+    &__cover {
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
         object-fit: cover;
+        overflow: hidden;
     }
 
     &__content {
+        max-width: 100px;
         position: absolute;
         color: $color-white;
         font-size: 1.125em;
