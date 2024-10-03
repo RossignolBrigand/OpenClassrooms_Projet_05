@@ -10,13 +10,15 @@ import '../../styles/pages/_home.scss';
 
 
 function Home() {
+
     return (
         <div className="home">
             <Banner />
             <CardGallery>
                 {LogementsData.map((logement) => (
                     <CardItem
-                        key={logement.id}
+                        key={`${logement.id}-${logement.title}`}
+                        id={logement.id}
                         title={logement.title}
                         cover={logement.cover}
                     />

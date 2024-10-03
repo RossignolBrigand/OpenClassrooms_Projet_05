@@ -10,7 +10,7 @@ import Layout from './layout/Layout/Layout'
 
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import ItemPage from './pages/ItemPage/ItemPage'
+import LogementPage from './pages/LogementPage/LogementPage'
 import Error from './pages/Error/Error';
 
 
@@ -22,7 +22,7 @@ root.render(
         <Routes>
           <Route exact path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
-          <Route path='item/:id' element={<ItemPage />}></Route>
+          <Route path='/logements/:id' element={<LogementPage />}></Route>
           <Route path='*' element={<Error />}></Route>
         </Routes>
       </Layout>

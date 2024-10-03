@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import PropTypes, { number } from 'prop-types';
 
 import '../../styles/components/_cardItem.scss'
 
-function CardItem({ id, title, cover }) {
+function CardItem({ id, key, title, cover }) {
 
     return (
-        <Link to={`/item/${id}`} key={`${id}-${title}`} className='card'>
+        <Link to={`/logements/${id}`} key={key} className='card'>
             <div className='card-wrapper'>
                 <div className='card-wrapper__gradient'>
                     <img className='card-wrapper__cover' src={cover} alt=''></img>
@@ -17,10 +17,10 @@ function CardItem({ id, title, cover }) {
     );
 }
 
-CardItem.propTypes = {
-    id: PropTypes.string,
-    title: PropTypes.string,
-    cover: PropTypes.string
-}
+// CardItem.propTypes = {
+//     id: PropTypes.oneOf,
+//     title: PropTypes.string,
+//     cover: PropTypes.string
+// }
 
 export default CardItem;
