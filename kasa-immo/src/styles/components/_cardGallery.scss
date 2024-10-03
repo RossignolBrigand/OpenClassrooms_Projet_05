@@ -3,6 +3,7 @@
 .cards-gallery {
     width: 100%;
     height: auto;
+    flex-grow: 1;
     margin: 50px 0;
     background-color: $color-light-gray;
     border-radius: 25px;

@@ -1,6 +1,8 @@
+@import '../abstracts/mixins';
+
 .home {
-    height: 100vh;
-    margin: 0 100px;
+    height: auto;
     display: flex;
     flex-direction: column;
+    @include document-horizontal-margin;
 }
