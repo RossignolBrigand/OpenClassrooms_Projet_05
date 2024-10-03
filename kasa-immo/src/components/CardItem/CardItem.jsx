@@ -6,7 +6,7 @@ import '../../styles/components/_cardItem.scss'
 function CardItem({ id, title, cover }) {
 
     return (
-        <Link to={`/item/${id}`} key={`${id}-${title}`}>
+        <Link to={`/item/${id}`} key={`${id}-${title}`} className='card'>
             <div className='card-wrapper'>
                 <div className='card-wrapper__gradient'>
                     <img className='card-wrapper__cover' src={cover} alt=''></img>
