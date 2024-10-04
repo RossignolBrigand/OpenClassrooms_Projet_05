@@ -1,17 +1,26 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { useParams } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
 import LogementsData from '../../datas/logements.json';
+
 
 function LogementPage() {
 
     const { id } = useParams();
+    const navigate = useNavigate();
 
     const logement = LogementsData.find((logement) => logement.id === String(id));
 
-    if (!logement) {
-        return <div>Logement non trouvé ou inexistant</div>;
-    }
+    useEffect(() => {
+        if (!logement) {
+            return (
+                navigate('/error')
+            )
+        }
+    }, [logement, navigate]);
+
+    if (!logement) { return null };
 
     return (
         <div>
@@ -19,6 +28,7 @@ function LogementPage() {
             <h2>{logement.title}</h2>
             <p>{logement.description}</p>
             <p>This is a placeholder item for test purposes</p>
+            <Link to={"/"}>Retour à l'accueil</Link>
         </div>
     )
 }
