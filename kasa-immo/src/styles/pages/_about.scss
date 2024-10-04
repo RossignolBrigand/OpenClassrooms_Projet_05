@@ -1,0 +1,5 @@
+@import '../abstracts/_mixins.scss';
+
+.about {
+    @include document-horizontal-margin;
+}
