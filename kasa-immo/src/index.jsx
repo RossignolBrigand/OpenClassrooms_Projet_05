@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 import './index.css';
 import './styles/main.scss'
@@ -23,8 +23,8 @@ root.render(
           <Route exact path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/logements/:id' element={<LogementPage />}></Route>
-          <Route path='*' element={<Error />}></Route>
           <Route path='/error' element={<Error />}></Route>
+          <Route path='*' element={<Navigate to='/error' />}></Route>
         </Routes>
       </Layout>
     </Router>
