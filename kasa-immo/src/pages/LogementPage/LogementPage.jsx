@@ -1,6 +1,9 @@
 import React from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+
+import Carousel from "../../components/Carousel/Carousel";
+import Accordion from "../../components/Accordion/Accordion";
 
 import LogementsData from '../../datas/logements.json';
 
@@ -24,12 +27,26 @@ function LogementPage() {
 
     return (
         <div>
+
             <h1>Page de l'objet: {id} </h1>
+            <Carousel
+                images={[logement.pictures]}
+
+            />
             <h2>{logement.title}</h2>
-            <p>{logement.description}</p>
-            <p>This is a placeholder item for test purposes</p>
-            <Link to={"/"}>Retour à l'accueil</Link>
-        </div>
+            <p> Host : {logement.host.name}</p>
+            <img src={logement.host.picture} alt=""></img>
+            <div>
+                <Accordion
+                    title={"Description"}
+                    content={logement.description}
+                />
+                <Accordion
+                    title={"Équipements"}
+                    content={logement.equipments}
+                />
+            </div>
+        </div >
     )
 }
 
