@@ -3,10 +3,10 @@ import PropTypes, { number } from 'prop-types';
 
 import '../../styles/components/_cardItem.scss'
 
-function CardItem({ id, key, title, cover }) {
+function CardItem({ id, title, cover }) {
 
     return (
-        <Link to={`/logements/${id}`} key={key} className='card'>
+        <Link to={`/logements/${id}`} key={id} className='card'>
             <div className='card-wrapper'>
                 <div className='card-wrapper__gradient'>
                     <img className='card-wrapper__cover' src={cover} alt=''></img>
@@ -17,10 +17,5 @@ function CardItem({ id, key, title, cover }) {
     );
 }
 
-// CardItem.propTypes = {
-//     id: PropTypes.oneOf,
-//     title: PropTypes.string,
-//     cover: PropTypes.string
-// }
 
 export default CardItem;

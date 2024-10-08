@@ -11,23 +11,25 @@ function Accordion({ id, title, content }) {
 
     return isOpen ? (
         <div className="accordion" key={id}>
-            <div className="accordion__title">
-                <h2 className="accordion__title--content">{title}</h2>
-                <div onClick={() => accordionIsOpen(false)} className="accordion__title--icon">
+            <div className="accordion__titleBar">
+                <h2 className="accordion__titleBar--title">{title}</h2>
+                <div onClick={() => accordionIsOpen(false)} className="accordion__titleBar--icon">
                     <ArrowIcon
                         color={"white"}
                     />
                 </div>
             </div>
             <div className="accordion__content">
-                {content}
+                <p className="accordion__content--text">
+                    {content}
+                </p>
             </div>
         </div >
     ) : (
         <div className="accordion" key={id}>
-            <div className="accordion__title">
-                <h2 className="accordion__title--content">{title}</h2>
-                <div onClick={() => accordionIsOpen(true)} className="accordion__title--icon">
+            <div className="accordion__titleBar">
+                <h2 className="accordion__titleBar--title">{title}</h2>
+                <div onClick={() => accordionIsOpen(true)} className="accordion__titleBar--icon">
                     <ArrowIcon
                         color={"white"}
                     />
