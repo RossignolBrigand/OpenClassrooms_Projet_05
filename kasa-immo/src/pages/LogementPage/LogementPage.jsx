@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-import Carousel from "../../components/Carousel/Carousel";
+import Slideshow from "../../components/Slideshow/Slideshow";
 import Accordion from "../../components/Accordion/Accordion";
 
 import LogementsData from '../../datas/logements.json';
@@ -27,11 +27,8 @@ function LogementPage() {
 
     return (
         <div>
-
-            <h1>Page de l'objet: {id} </h1>
-            <Carousel
-                images={[logement.pictures]}
-
+            <Slideshow
+                slides={logement.pictures}
             />
             <h2>{logement.title}</h2>
             <p> Host : {logement.host.name}</p>
