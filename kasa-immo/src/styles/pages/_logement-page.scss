@@ -2,4 +2,12 @@
 
 .logement-page {
     @include document-horizontal-margin;
+
+    & .accordions-container {
+        height: 250px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 1em;
+    }
 }

@@ -28,6 +28,7 @@ function LogementPage() {
     if (!logement) { return null };
 
     return (
+
         <div className="logement-page">
             <Slideshow
                 slides={logement.pictures}
