@@ -1,0 +1,9 @@
+.slideshow-arrowbtn {
+    cursor: pointer;
+
+    &.arrow-left {}
+
+    &.arrow-right {
+        transform: rotate(180deg);
+    }
+}

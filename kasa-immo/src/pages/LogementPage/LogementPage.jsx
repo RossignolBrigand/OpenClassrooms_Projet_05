@@ -7,6 +7,8 @@ import Accordion from "../../components/Accordion/Accordion";
 
 import LogementsData from '../../datas/logements.json';
 
+import '../../styles/pages/_logement-page.scss';
+
 
 function LogementPage() {
 
@@ -26,14 +28,14 @@ function LogementPage() {
     if (!logement) { return null };
 
     return (
-        <div>
+        <div className="logement-page">
             <Slideshow
                 slides={logement.pictures}
             />
             <h2>{logement.title}</h2>
             <p> Host : {logement.host.name}</p>
             <img src={logement.host.picture} alt=""></img>
-            <div>
+            <div className="accordions-container">
                 <Accordion
                     title={"Description"}
                     content={logement.description}

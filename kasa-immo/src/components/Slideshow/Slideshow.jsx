@@ -1,42 +1,34 @@
-import React, { createContext } from "react";
-import { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
+
 import PropTypes from "prop-types";
 
-import SlideshowItem from "../SlideshowItem/SlideshowItem";
-
 import '../../styles/components/_slideshow.scss'
+import SlideshowArrowIcon from "../SlideshowArrowIcon/SlideshowArrowIcon";
+import { useSearchParams } from "react-router-dom";
 
 // --------------------------------------------------------------
 
-const SlideshowContext = createContext();
-
+const ArrowColor = "white";
 function Slideshow({ slides }) {
 
-    const [context, setContext] = useState({ items: [], edge: false });
-    const timer = useRef(null);
+    const [slide, setSlide] = useState(0);
 
-    useEffect(() => {
-        if (timer.current) clearTimeout(timer.current);
-        timer.current = setTimeout(() => {
-            if (context.items.length > 1 && context.edge) {
-                const head = context.items.shift();
-                context.items.push(head);
-            }
-            context.edge = !context.edge;
-            setContext({ ...context });
-        }, 2500);
+    const nextSlide = () => {
+        setSlide(slide === slides.length - 1 ? 0 : slide + 1)
+    }
 
-        return () => clearTimeout(timer.current);
-    });
+    const prevSlide = () => {
+        setSlide(slide === 0 ? slides.length - 1 : slide - 1)
+    }
 
     if (slides.length <= 1)
         return (
-            <div className="slideshow">
-                {slides.map((slide, index) => (
+            <div className="slideshow" key={"Slide 1"}>
+                {slides.map((data, index) => (
                     <img
-                        className="slideshow__image"
+                        className="slideshow__slide--img"
                         key={index}
-                        src={slide}
+                        src={data}
                         alt={`Slide ${index}`}
                     />
                 ))}
@@ -44,21 +36,29 @@ function Slideshow({ slides }) {
         )
 
     return (
-        <SlideshowContext.Provider value={[context, setContext]} className="slideshow">
-            {slides.map((slide, index) => (
-                <div className="slideshow__content">
-                    <SlideshowItem
-                        index={index}
-                        className="slideshow__content--image"
-                        src={slide}
+        <div className="slideshow">
+            <SlideshowArrowIcon
+                color={ArrowColor}
+                className="slideshow-arrowbtn arrow-left"
+                onClick={prevSlide}
+            />
+            {slides.map((data, index) => (
+                <div className={`${slide === index ? 'slideshow__slide' : 'slideshow__slide slideshow__slide-hidden'}`} key={`Slide ${index}`}>
+                    <img
+                        className={`slideshow__slide--img`}
+                        key={index}
+                        src={data}
                         alt={`Slide ${index}`}
                     />
-                    <p className="slideshow__content--img-counter">{index}/{slides.length}</p>
+                    <p className="slideshow__slide--counter">{index + 1}/{slides.length}</p>
                 </div>
             ))}
-            <button className="slideshow__content--btn-prev">Image Précedente</button>
-            <button className="slideshow__content--btn-next">Image Suivante</button>
-        </SlideshowContext.Provider>
+            <SlideshowArrowIcon
+                color={ArrowColor}
+                className="slideshow-arrowbtn arrow-right"
+                onClick={nextSlide}
+            />
+        </div>
     )
 }
 
