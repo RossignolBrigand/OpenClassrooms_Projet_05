@@ -1,0 +1,24 @@
+@import '../abstracts/variables';
+
+.character-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__name {
+        margin: 0;
+        width: 100px;
+        display: flex;
+        text-align: end;
+        padding-right: 1em;
+        color: $primary-color;
+        font-size: 1.125em;
+        font-weight: 500;
+    }
+
+    &__img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50px;
+    }
+}

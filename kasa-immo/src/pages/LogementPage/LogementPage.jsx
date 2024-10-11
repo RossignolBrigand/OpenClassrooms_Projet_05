@@ -4,6 +4,9 @@ import { useEffect } from "react";
 
 import Slideshow from "../../components/Slideshow/Slideshow";
 import Accordion from "../../components/Accordion/Accordion";
+import CharacterProfile from "../../components/CharacterProfile/CharacterProfile";
+import TagSystem from "../../components/TagSystem/TagSystem";
+import RatingSystem from "../../components/RatingSystem/RatingSystem";
 
 import LogementsData from '../../datas/logements.json';
 
@@ -33,10 +36,26 @@ function LogementPage() {
             <Slideshow
                 slides={logement.pictures}
             />
-            <h2>{logement.title}</h2>
-            <p> Host : {logement.host.name}</p>
-            <img src={logement.host.picture} alt=""></img>
-            <div className="accordions-container">
+            <div className="logement-page__infos">
+                <div className="title-container">
+                    <h2 className="title-container__title">{logement.title}</h2>
+                    <h3 className="title-container__location">{logement.location}</h3>
+                </div>
+                <CharacterProfile
+                    person={logement.host}
+                />
+            </div>
+            <div className="logement-page__infos">
+                <TagSystem
+                    data={logement.tags}
+                />
+                <RatingSystem
+                    rating={logement.rating}
+                    totalStars={5}
+                    className={"logement-page__infos--stars"}
+                />
+            </div>
+            <div className="logement-page__infos accordions-container">
                 <Accordion
                     title={"Description"}
                     content={logement.description}

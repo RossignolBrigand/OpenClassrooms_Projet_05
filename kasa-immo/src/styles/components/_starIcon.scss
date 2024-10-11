@@ -1,0 +1,13 @@
+@import '../abstracts/variables';
+
+.star {
+    margin-right: 1em;
+
+    &-empty path {
+        fill: $color-dark-gray;
+    }
+
+    &-filled path {
+        fill: $primary-color;
+    }
+}
