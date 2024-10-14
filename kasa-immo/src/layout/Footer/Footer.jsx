@@ -1,5 +1,5 @@
 import LogoIcon from '../../components/LogoIcon/LogoIcon';
-import '../../styles/layout/_footer.scss'
+import './_footer.scss'
 
 function Footer() {
     return (

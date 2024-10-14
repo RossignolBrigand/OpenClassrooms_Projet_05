@@ -1,7 +1,7 @@
-@import '../abstracts/_mixins.scss';
+@use '../../styles/abstracts/_mixins.scss' as mix;
 
 .about {
-    @include document-horizontal-margin;
+    @include mix.document-horizontal-margin;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

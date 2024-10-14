@@ -10,7 +10,7 @@ import RatingSystem from "../../components/RatingSystem/RatingSystem";
 
 import LogementsData from '../../datas/logements.json';
 
-import '../../styles/pages/_logement-page.scss';
+import './_logement-page.scss';
 
 
 function LogementPage() {

@@ -1,7 +1,7 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-import '../../styles/layout/_layout.scss';
+import './_layout.scss';
 
 function Layout({ children }) {
     return (

@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../../styles/components/_characterprofile.scss'
+import './_characterprofile.scss'
 
 function CharacterProfile({ person }) {
 

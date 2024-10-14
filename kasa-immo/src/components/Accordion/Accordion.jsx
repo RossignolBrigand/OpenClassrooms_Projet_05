@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-import '../../styles/components/_accordion.scss';
+import './_accordion.scss';
 import ArrowIcon from "../ArrowIcon/ArrowIcon";
 
 

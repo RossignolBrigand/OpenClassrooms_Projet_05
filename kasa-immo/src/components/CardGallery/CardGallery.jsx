@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../../styles/components/_card-gallery.scss'
+import './_card-gallery.scss'
 
 function CardGallery({ children }) {
 

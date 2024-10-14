@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import LogoIcon from "../../components/LogoIcon/LogoIcon";
-import '../../styles/layout/_header.scss'
+import './_header.scss'
+
+//------------------------------------------------------------------
 
 function Header() {
 

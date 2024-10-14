@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../../styles/components/_tags.scss'
+import './_tags.scss'
 
 function TagSystem({ data }) {
     return (

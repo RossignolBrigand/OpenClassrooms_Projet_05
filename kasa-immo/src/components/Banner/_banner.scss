@@ -1,5 +1,4 @@
-@import '../abstracts/variables';
-@import '../abstracts/mixins';
+@use '../../styles/abstracts/_index.scss';
 
 .banner {
     position: relative;
@@ -10,7 +9,11 @@
     align-items: center;
     overflow: hidden;
     border-radius: 25px;
-    @include drop-shadow;
+    @include index.drop-shadow;
+
+    @media screen and (max-width:index.$screen-size-small) {
+        height: 110px;
+    }
 
     &__image {
         width: 100%;
@@ -33,9 +36,15 @@
     }
 
     &__text {
-        color: $color-white;
-        font-size: 3em;
+        display: flex;
+        color: index.$color-white;
+        font-size: 3rem;
         font-weight: bold;
         text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+
+        @media screen and (max-width:index.$screen-size-small) {
+            font-size: 1.5rem;
+            text-shadow: none;
+        }
     }
 }

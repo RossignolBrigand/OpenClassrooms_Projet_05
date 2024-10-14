@@ -1,0 +1,21 @@
+.arrow-icon__container {
+    cursor: pointer;
+
+    &:hover .arrow-left {
+        transform: rotate(0deg) scale(1.1);
+    }
+
+    &:hover .arrow-right {
+        transform: rotate(180deg) scale(1.1);
+    }
+}
+
+.arrow-left {
+    transform: rotate(0deg);
+    transition: transform 200ms ease;
+}
+
+.arrow-right {
+    transform: rotate(180deg);
+    transition: transform 200ms ease;
+}

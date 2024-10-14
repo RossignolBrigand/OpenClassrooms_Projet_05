@@ -2,9 +2,8 @@ import React, { useState } from "react";
 
 import PropTypes from "prop-types";
 
-import '../../styles/components/_slideshow.scss'
+import './_slideshow.scss'
 import SlideshowArrowIcon from "../SlideshowArrowIcon/SlideshowArrowIcon";
-import { useSearchParams } from "react-router-dom";
 
 // --------------------------------------------------------------
 
@@ -39,8 +38,9 @@ function Slideshow({ slides }) {
         <div className="slideshow">
             <SlideshowArrowIcon
                 color={ArrowColor}
-                className="slideshow-arrowbtn arrow-left"
+                className="arrow-icon arrow-left"
                 onClick={prevSlide}
+                direction={"left"}
             />
             {slides.map((data, index) => (
                 <div className={`${slide === index ? 'slideshow__slide' : 'slideshow__slide slideshow__slide-hidden'}`} key={`Slide ${index}`}>
@@ -55,8 +55,9 @@ function Slideshow({ slides }) {
             ))}
             <SlideshowArrowIcon
                 color={ArrowColor}
-                className="slideshow-arrowbtn arrow-right"
+                className="arrow-icon arrow-right"
                 onClick={nextSlide}
+                direction={"right"}
             />
         </div>
     )

@@ -4,8 +4,8 @@ import Banner from "../../components/Banner/Banner";
 import imageSrc from '../../assets/covers/Cover2.png'
 import Accordion from "../../components/Accordion/Accordion";
 
-import '../../styles/pages/_about.scss'
 import AboutData from '../../datas/about.json'
+import './_about.scss'
 
 function About() {
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-import '../../styles/components/_arrow-icon.scss'
+import './_arrow-icon.scss'
 
 function ArrowIcon({ color }) {
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../../styles/components/_starIcon.scss'
+import './_starIcon.scss'
 
 function StarIcon({ className }) {
     return (

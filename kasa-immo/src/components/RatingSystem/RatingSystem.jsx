@@ -2,7 +2,7 @@ import React from "react";
 
 import StarIcon from "../StarIcon/StarIcon";
 
-import '../../styles/components/_rating-system.scss'
+import './_rating-system.scss'
 
 function RatingSystem({ rating, totalStars, className }) {
 

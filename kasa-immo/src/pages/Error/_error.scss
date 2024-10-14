@@ -1,4 +1,4 @@
-@import '../abstracts/variables';
+@use '../../styles/abstracts/variables' as var;
 
 .error {
     margin: 89px 0 139px 0;
@@ -10,14 +10,14 @@
     &__code {
         margin: 0;
         font-size: 18em;
-        color: $primary-color;
+        color: var.$primary-color;
     }
 
     &__content {
         margin: 139px 0;
         font-size: 2.25em;
         font-weight: 500;
-        color: $primary-color;
+        color: var.$primary-color;
     }
 
     &__link {

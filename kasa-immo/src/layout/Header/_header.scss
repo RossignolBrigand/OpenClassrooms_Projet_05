@@ -1,0 +1,50 @@
+@use '../../styles/abstracts/variables' as var;
+@use '../../styles/abstracts/mixins' as mix;
+
+.header {
+    display: flex;
+    flex-direction: row;
+    margin-top: 45px;
+    margin-bottom: 50px;
+    @include mix.document-horizontal-margin;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width:var.$screen-size-small) {
+        margin-top: 20px;
+    }
+}
+
+.logoIcon {
+    fill: var.$primary-color;
+
+    @media screen and (max-width:var.$screen-size-small) {
+        width: 75%;
+    }
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+
+    &__navlink {
+        padding-left: 60px;
+        font-weight: 500;
+        font-size: 1.5em;
+
+        @media screen and (max-width: var.$screen-size-small) {
+            padding-left: 1rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            text-decoration: underline 2px;
+
+            @media screen and (max-width: var.$screen-size-small) {
+                text-decoration: underline 1px;
+            }
+        }
+    }
+}

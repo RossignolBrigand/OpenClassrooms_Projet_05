@@ -7,7 +7,7 @@ import CardItem from "../../components/CardItem/CardItem";
 import LogementsData from "../../datas/logements.json";
 import imageSrc from '../../assets/covers/Cover1.png'
 
-import '../../styles/pages/_home.scss';
+import './_home.scss';
 
 function Home() {
 
