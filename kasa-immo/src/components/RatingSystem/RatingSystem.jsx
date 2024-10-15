@@ -7,7 +7,7 @@ import './_rating-system.scss'
 function RatingSystem({ rating, totalStars, className }) {
 
     return (
-        <div className={`rating-container  ${className}`}>
+        <div className={`${className}`}>
             {[...Array(totalStars)].map((_, index) => {
                 const starValue = index + 1;
                 console.log(starValue)

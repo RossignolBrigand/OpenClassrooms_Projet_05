@@ -2,9 +2,9 @@ import React from "react";
 
 import './_tags.scss'
 
-function TagSystem({ data }) {
+function TagSystem({ data, className }) {
     return (
-        <div className="tags-container">
+        <div className={className}>
             {data.map((tag, index) => (
                 <button className="tag-btn" key={index}>{tag}</button>
             ))}

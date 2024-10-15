@@ -5,18 +5,60 @@
     @include mix.document-horizontal-margin;
 
     &__infos {
-        display: flex;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
-        margin: 2em 0;
+        align-items: center;
+        margin: 2rem 0;
+
+        & .character-profile,
+        .rating-system {
+            justify-self: end;
+        }
+
+        @media screen and (max-width:var.$screen-size-small) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 2fr 1fr 1fr;
+
+            .title-container {
+                grid-column: 1 / -1;
+                grid-row: 1;
+            }
+
+            .tags-container {
+                grid-column: 1 / -1;
+                grid-row: 2;
+            }
+
+            .rating-system {
+                grid-column: 1;
+                grid-row: 3;
+                justify-self: start;
+                align-self: center;
+            }
+
+            .character-profile {
+                grid-column: 2;
+                grid-row: 3;
+                justify-self: end;
+            }
+        }
     }
 
     & .accordions-container {
         height: 250px;
         display: flex;
         justify-content: space-between;
-        gap: 5em;
+        gap: 5rem;
+
+        @media screen and (max-width:var.$screen-size-small) {
+            flex-direction: column;
+            height: auto;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
     }
 }
 

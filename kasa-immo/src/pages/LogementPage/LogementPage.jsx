@@ -43,19 +43,19 @@ function LogementPage() {
                 </div>
                 <CharacterProfile
                     person={logement.host}
+                    className={"character-profile"}
                 />
-            </div>
-            <div className="logement-page__infos">
                 <TagSystem
+                    className={"tags-container"}
                     data={logement.tags}
                 />
                 <RatingSystem
                     rating={logement.rating}
                     totalStars={5}
-                    className={"logement-page__infos--stars"}
+                    className={"rating-system"}
                 />
             </div>
-            <div className="logement-page__infos accordions-container">
+            <div className="accordions-container">
                 <Accordion
                     title={"Description"}
                     content={logement.description}
