@@ -12,6 +12,11 @@
 
     @media screen and (max-width:var.$screen-size-small) {
         margin-top: 20px;
+        margin-bottom: 27px;
+
+        & a {
+            width: 50%;
+        }
     }
 }
 
@@ -19,14 +24,14 @@
     fill: var.$primary-color;
 
     @media screen and (max-width:var.$screen-size-small) {
-        width: 75%;
+        width: 100%;
     }
 }
 
 .navbar {
     display: flex;
-    width: 100%;
     flex-direction: row;
+    text-wrap: nowrap;
 
     &__navlink {
         padding-left: 60px;

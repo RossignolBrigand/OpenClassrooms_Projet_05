@@ -40,11 +40,13 @@
         color: index.$color-white;
         font-size: 3rem;
         font-weight: bold;
+        text-wrap: balance;
         text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
 
         @media screen and (max-width:index.$screen-size-small) {
             font-size: 1.5rem;
             text-shadow: none;
+            padding: 1rem;
         }
     }
 }
