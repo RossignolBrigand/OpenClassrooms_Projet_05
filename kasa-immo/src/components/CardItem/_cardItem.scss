@@ -11,6 +11,11 @@
     border-radius: 10px;
     transition: scale 300ms ease;
 
+    @media screen and (max-width: index.$screen-size-small) {
+        width: 410px;
+        height: 255px;
+    }
+
     &:hover {
         scale: 1.025;
     }
