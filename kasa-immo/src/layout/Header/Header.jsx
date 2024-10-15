@@ -10,7 +10,7 @@ function Header() {
     return (
         <header className="header">
             <LogoIcon />
-            <nav className="header__navbar">
+            <nav className="navbar">
                 <Link className="navbar__navlink" to={'/'}>Accueil</Link>
                 <Link className="navbar__navlink" to={'/about'}>À propos</Link>
             </nav>

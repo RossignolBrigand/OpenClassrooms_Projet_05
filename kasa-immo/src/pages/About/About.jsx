@@ -13,6 +13,7 @@ function About() {
         <div className="about">
             <Banner
                 imageSrc={imageSrc}
+                text={""}
             />
             <div className="about__accordion-wrapper">
                 {AboutData.map((accordion) => (

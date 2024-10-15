@@ -12,6 +12,11 @@
     &__content {
         color: var.$color-white;
         font-size: medium;
+        text-align: center;
+
+        @media screen and (max-width: var.$screen-size-small) {
+            width: 50%;
+        }
     }
 
     .logoIcon {
