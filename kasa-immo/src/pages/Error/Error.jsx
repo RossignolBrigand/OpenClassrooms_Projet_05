@@ -8,7 +8,7 @@ function Error() {
         <div className="error">
             <h1 className="error__code">404</h1>
             <h2 className="error__content">Oups! La page que vous demandez n'existe pas.</h2>
-            <Link className="error__link" to={'/'}>Retourner vers la page d'accueil</Link>
+            <Link className="error__link" to={'/'}>Retourner sur la page d'accueil</Link>
         </div>
     )
 }

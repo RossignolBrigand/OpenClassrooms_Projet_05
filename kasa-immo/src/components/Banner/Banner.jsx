@@ -9,7 +9,7 @@ function Banner({ imageSrc, text }) {
             <div className="banner__content">
                 {text && (
                     <h1 className="banner__text">{text}</h1>
-                )};
+                )}
             </div>
         </div>
     );

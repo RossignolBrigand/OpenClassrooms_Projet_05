@@ -3,6 +3,7 @@
 
 .logement-page {
     @include mix.document-horizontal-margin;
+    margin-bottom: 2rem;
 
     &__infos {
         display: grid;
@@ -48,7 +49,6 @@
     }
 
     & .accordions-container {
-        height: 250px;
         display: flex;
         justify-content: space-between;
         gap: 5rem;
