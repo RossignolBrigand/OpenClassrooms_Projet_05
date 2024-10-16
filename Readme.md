@@ -10,7 +10,7 @@ Le projet consiste à reconstruire de toute pièces l'application de Kasa Immobi
 
 ## Technologies
 
-- JSX
+- JS
 - CSS
 - HTML
 
