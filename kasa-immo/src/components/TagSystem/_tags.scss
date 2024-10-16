@@ -3,10 +3,10 @@
 .tags-container {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 10px;
 
     & .tag-btn {
-        padding: 0.5em 2em;
+        padding: 5px 10px;
         background-color: var.$primary-color;
         border: 1px solid var.$primary-color;
         border-radius: 25px;
