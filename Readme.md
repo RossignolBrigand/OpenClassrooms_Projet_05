@@ -17,6 +17,11 @@ Le projet consiste à reconstruire de toute pièces l'application de Kasa Immobi
 - React
 - Sass
 
+# How to use
+
+Go to kasa-immo folder (the app folder) and run yarn start.
+The page should load on <http://localhost:3000/>
+
 ## Contribute to the project
 
 Le projet n'est pas ouvert aux modifications extérieures mais le code reste disponible pour donner quelques pistes ou clés.
