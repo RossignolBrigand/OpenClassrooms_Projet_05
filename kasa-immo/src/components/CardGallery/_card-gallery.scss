@@ -1,0 +1,25 @@
+@use '../../styles/abstracts/variables' as var;
+
+.cards-gallery {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    padding: 2rem;
+    gap: 2rem;
+    margin: 50px 0;
+    border-radius: 25px;
+    background-color: var.$color-light-gray;
+    place-items: center;
+
+    @media screen and (max-width: var.$screen-size-small) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var.$color-white;
+        margin-top: 1.5rem;
+        margin-bottom: 27px;
+        padding: 0;
+        gap: 1.5rem;
+    }
+}

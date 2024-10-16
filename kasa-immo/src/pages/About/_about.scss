@@ -1,0 +1,16 @@
+@use '../../styles/abstracts/_mixins.scss' as mix;
+
+.about {
+    @include mix.document-horizontal-margin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__accordion-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 38px 0;
+        gap: 30px;
+    }
+}

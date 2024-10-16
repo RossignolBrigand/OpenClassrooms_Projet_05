@@ -1,0 +1,77 @@
+@use '../../styles/abstracts/_mixins' as mix;
+@use '../../styles/abstracts/variables' as var;
+
+.logement-page {
+    @include mix.document-horizontal-margin;
+    margin-bottom: 2rem;
+
+    &__infos {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0;
+
+        & .character-profile,
+        .rating-system {
+            justify-self: end;
+        }
+
+        @media screen and (max-width:var.$screen-size-small) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 2fr 1fr 1fr;
+
+            .title-container {
+                grid-column: 1 / -1;
+                grid-row: 1;
+            }
+
+            .tags-container {
+                grid-column: 1 / -1;
+                grid-row: 2;
+            }
+
+            .rating-system {
+                grid-column: 1;
+                grid-row: 3;
+                justify-self: start;
+                align-self: center;
+            }
+
+            .character-profile {
+                grid-column: 2;
+                grid-row: 3;
+                justify-self: end;
+            }
+        }
+    }
+
+    & .accordions-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 5rem;
+
+        @media screen and (max-width:var.$screen-size-small) {
+            flex-direction: column;
+            height: auto;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.title-container {
+    &__title {
+        color: var.$primary-color;
+        font-size: 2.25em;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    &__location {
+        font-size: 1.125em;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,30 @@
+@use '../../styles/abstracts/_variables' as var;
+
+.character-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__name {
+        margin: 0;
+        width: 100px;
+        display: flex;
+        text-align: end;
+        padding-right: 1em;
+        color: var.$primary-color;
+        font-size: 1.125em;
+        font-weight: 500;
+
+        @media screen and (max-width:var.$screen-size-small) {
+            font-size: 0.75rem;
+            padding-right: 0.75rem;
+            width: auto;
+        }
+    }
+
+    &__img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50px;
+    }
+}

@@ -1,0 +1,17 @@
+@use '../../styles/abstracts/variables' as var;
+
+.star {
+    margin-right: 10px;
+
+    @media screen and (max-width:var.$screen-size-small) {
+        width: 18px;
+    }
+
+    &-empty path {
+        fill: var.$color-dark-gray;
+    }
+
+    &-filled path {
+        fill: var.$primary-color;
+    }
+}

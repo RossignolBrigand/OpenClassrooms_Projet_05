@@ -1,0 +1,21 @@
+@use '../../styles/abstracts/variables' as var;
+
+.tags-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    & .tag-btn {
+        padding: 5px 10px;
+        background-color: var.$primary-color;
+        border: 1px solid var.$primary-color;
+        border-radius: 25px;
+        color: var.$color-white;
+        font-weight: 700;
+        font-family: var.$main-font;
+
+        @media screen and (max-width:var.$screen-size-small) {
+            font-size: 0.65rem;
+        }
+    }
+}

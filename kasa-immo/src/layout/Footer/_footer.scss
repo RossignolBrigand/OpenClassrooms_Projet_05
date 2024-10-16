@@ -1,0 +1,28 @@
+@use '../../styles/abstracts/variables' as var;
+
+.footer {
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var.$color-black;
+    padding: 20px;
+
+    &__content {
+        color: var.$color-white;
+        font-size: medium;
+        text-align: center;
+
+        @media screen and (max-width: var.$screen-size-small) {
+            width: 50%;
+        }
+    }
+
+    .logoIcon {
+        width: 122px;
+        height: 40px;
+        fill: var.$color-white;
+    }
+
+}

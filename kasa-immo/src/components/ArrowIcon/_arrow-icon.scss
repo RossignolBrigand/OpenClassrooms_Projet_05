@@ -1,0 +1,10 @@
+.arrow-icon {
+
+    transition: transform 250ms ease-in-out;
+    cursor: pointer;
+
+    &.rotated {
+        transform: rotate(180deg);
+    }
+
+}

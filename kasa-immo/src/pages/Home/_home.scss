@@ -1,0 +1,9 @@
+@use '../../styles/abstracts/mixins' as mix;
+@use '../../styles/abstracts/variables' as var;
+
+.home {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    @include mix.document-horizontal-margin;
+}

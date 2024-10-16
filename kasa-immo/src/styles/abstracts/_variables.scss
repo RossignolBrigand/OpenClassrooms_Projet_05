@@ -1,23 +1,51 @@
-/// Font styles ///
+//---------------------------------//
+// This file contains all (or most of all) base variables used within the project
+//--------------------------------//
+
+/// Media queries 
+/// 
+
+$screen-size-small: "768px";
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Main font
+/// @type String
+$main-font: "Montserrat";
 
 
-/// Color ///
 
 
-// Main Accent Color //
-$main-color: #FF6060;
 
-// White //
-$white-color: #FFFF;
+/// Primary color ///
+/// @type Color
+$primary-color: #FF6060;
 
-// Lighter Gray //
-$lighter-gray-color: rgba(246, 246, 246, 45%);
+/// Light Gray
+/// @type Color
+$color-light-gray: #F6F6F6;
 
-// Light Gray //
-$light-gray-color: #E3E3E3;
+/// Darker Gray
+/// @type Color
+$color-dark-gray: #C4C4C4;
 
-// Darker Gray //
-$dark-gray-color: #C4C4C4;
+/// Black
+/// @type Color
+$color-black: #000000;
 
-// Black //
-$black-color: #000000;
+/// White
+/// @type Color 
+$color-white: #FFFFFF;
+
+
+
+
+
+/// Font sizes
+/// @type Font
