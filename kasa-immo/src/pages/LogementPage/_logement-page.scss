@@ -21,7 +21,8 @@
         @media screen and (max-width:var.$screen-size-small) {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 2fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            row-gap: 10px;
 
             .title-container {
                 grid-column: 1 / -1;
@@ -65,13 +66,21 @@
 .title-container {
     &__title {
         color: var.$primary-color;
-        font-size: 2.25em;
+        font-size: 2.25rem;
         font-weight: 500;
         margin: 0;
+
+        @media screen and (max-width:var.$screen-size-small) {
+            font-size: 1.125rem;
+        }
     }
 
     &__location {
-        font-size: 1.125em;
+        font-size: 1.125rem;
         font-weight: 500;
+
+        @media screen and (max-width:var.$screen-size-small) {
+            font-size: 0.875rem;
+        }
     }
 }
