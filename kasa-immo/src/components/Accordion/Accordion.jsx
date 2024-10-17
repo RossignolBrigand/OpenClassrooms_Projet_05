@@ -1,9 +1,15 @@
+//-------------------------------------------------------------------------------------------------
+// This component has two main points. 
+// The first is that based on a state the component renders either just the title bar or the title bar and div with content. 
+//The second point is that we check whether the content is a string or an array and renders a paragraph or a list.
+//-------------------------------------------------------------------------------------------------
 import React from "react";
 import { useState } from "react";
 
 import './_accordion.scss';
 import ArrowIcon from "../ArrowIcon/ArrowIcon";
 
+//-------------------------------------------------------------------------------------------
 
 function Accordion({ id, title, content }) {
 

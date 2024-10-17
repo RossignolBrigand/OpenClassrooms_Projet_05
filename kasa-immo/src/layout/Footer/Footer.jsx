@@ -4,7 +4,9 @@ import './_footer.scss'
 function Footer() {
     return (
         <footer className='footer'>
-            <LogoIcon />
+            <LogoIcon 
+                color={"white"}
+            />
             <p className='footer__content'>© 2020 Kasa. All rights reserved</p>
         </footer>
     )

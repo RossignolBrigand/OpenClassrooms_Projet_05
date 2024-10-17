@@ -3,6 +3,8 @@ import PropTypes, { number } from 'prop-types';
 
 import './_cardItem.scss'
 
+//---------------------------------------------------------------------------------------------------
+
 function CardItem({ id, title, cover }) {
 
     return (
