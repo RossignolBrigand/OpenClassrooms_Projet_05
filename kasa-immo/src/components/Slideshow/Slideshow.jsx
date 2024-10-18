@@ -43,7 +43,7 @@ function Slideshow({ slides }) {
                 direction={"left"}
             />
             {slides.map((data, index) => (
-                <div className={`${slide === index ? 'slideshow__slide' : 'slideshow__slide slideshow__slide-hidden'}`} key={`Slide ${index}`}>
+                <div className={`${slide === index ? 'slideshow__slide' : 'slideshow__slide-hidden'}`} key={`Slide ${index}`}>
                     <img
                         className={`slideshow__slide--img`}
                         key={index}
