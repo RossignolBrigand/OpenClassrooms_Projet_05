@@ -15,6 +15,7 @@ function Accordion({ id, title, content }) {
 
     const [isOpen, accordionIsOpen] = useState(false);
 
+    // If isOpen renders the whole component and checks for content type. Else renders just the title bar.
     return isOpen ? (
         <div className="accordion" key={id}>
             <div className="accordion__titleBar">

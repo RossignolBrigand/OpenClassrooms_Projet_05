@@ -12,10 +12,11 @@ function Slideshow({ slides }) {
 
     const [slide, setSlide] = useState(0);
 
+    // Test if at the end of the array or not and if so goes back to slide 0 else goess to slide + 1.
     const nextSlide = () => {
         setSlide(slide === slides.length - 1 ? 0 : slide + 1)
     }
-
+    // Test if at the start of the array and if so goes to the last picture else goes to slide - 1.
     const prevSlide = () => {
         setSlide(slide === 0 ? slides.length - 1 : slide - 1)
     }
