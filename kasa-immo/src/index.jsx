@@ -1,9 +1,15 @@
+///-------------------------------------------------------------------------------------------------
+/// This component contains the app architecture in the form of a Router and the Layout component.
+/// The nested Routes are nested within the Layout component which renders the Header and Footer. 
+/// ------------------------------------------------------------------------------------------------
+
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 import './index.scss';
-import './styles/main.scss'
+import './styles/base/_base.scss'
 import reportWebVitals from './reportWebVitals';
 
 import Layout from './layout/Layout/Layout'
@@ -13,6 +19,7 @@ import About from './pages/About/About';
 import LogementPage from './pages/LogementPage/LogementPage'
 import Error from './pages/Error/Error';
 
+//----------------------------------------------------------------------------
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -34,4 +41,4 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals(console.log);

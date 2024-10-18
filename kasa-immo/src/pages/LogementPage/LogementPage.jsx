@@ -1,3 +1,8 @@
+// We use the hook useParam to get the id corresponding to the item from which we want to render the data. 
+// From this id we look for the same within our LogementsData. For each logement we check whether we find an item.id that matches our logement.id
+// If we can't find one we navigate to error page to prevent any issues or crash of the app. 
+//---------------------------------------------------------------------------------------------------
+
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -12,6 +17,7 @@ import LogementsData from '../../datas/logements.json';
 
 import './_logement-page.scss';
 
+//------------------------------------------------------------------------------------------------
 
 function LogementPage() {
 

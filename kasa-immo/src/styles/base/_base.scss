@@ -12,6 +12,15 @@ html {
     text-wrap: balance;
 }
 
+
+body {
+    width: auto;
+    min-width: 375px;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
