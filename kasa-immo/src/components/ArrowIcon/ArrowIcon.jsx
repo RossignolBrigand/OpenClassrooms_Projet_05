@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 import './_arrow-icon.scss'
 
@@ -16,6 +17,10 @@ function ArrowIcon({ color }) {
             </svg>
         </div>
     )
+}
+
+ArrowIcon.propTypes = {
+    color: PropTypes.string
 }
 
 export default ArrowIcon;

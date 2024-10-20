@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import PropTypes, { number } from 'prop-types';
+import PropTypes from 'prop-types';
 
 import './_cardItem.scss'
 
@@ -17,5 +17,10 @@ function CardItem({ id, title, cover }) {
     );
 }
 
+CardItem.propTypes = {
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    cover: PropTypes.string.isRequired
+}
 
 export default CardItem;

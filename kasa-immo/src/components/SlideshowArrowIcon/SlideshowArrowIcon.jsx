@@ -1,5 +1,6 @@
 import React from "react";
 import "./_slidewhow-arrow-icon.scss"
+import PropTypes from "prop-types";
 
 function SlideshowArrowIcon({ color, className, onClick }) {
 
@@ -10,6 +11,12 @@ function SlideshowArrowIcon({ color, className, onClick }) {
             </svg>
         </div>
     )
+}
+
+SlideshowArrowIcon.propTypes = {
+    color: PropTypes.string,
+    className: PropTypes.string,
+    onClick: PropTypes.func.isRequired
 }
 
 export default SlideshowArrowIcon;

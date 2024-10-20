@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function LogoIcon({ color }) {
 
@@ -14,6 +15,10 @@ function LogoIcon({ color }) {
             </svg>
         </Link >
     )
+}
+
+LogoIcon.propTypes = {
+    color: PropTypes.string
 }
 
 export default LogoIcon;

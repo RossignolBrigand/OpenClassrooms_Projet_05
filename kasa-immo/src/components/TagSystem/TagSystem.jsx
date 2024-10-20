@@ -1,6 +1,7 @@
 import React from "react";
 
 import './_tags.scss'
+import PropTypes from "prop-types";
 
 function TagSystem({ data, className }) {
     return (
@@ -10,6 +11,11 @@ function TagSystem({ data, className }) {
             ))}
         </div>
     )
+}
+
+TagSystem.propTypes = {
+    data: PropTypes.array.isRequired,
+    className: PropTypes.string
 }
 
 export default TagSystem;

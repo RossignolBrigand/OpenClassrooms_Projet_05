@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import StarIcon from "../StarIcon/StarIcon";
 
@@ -22,4 +23,11 @@ function RatingSystem({ rating, totalStars, className }) {
         </div>
     )
 }
+
+RatingSystem.propTypes = {
+    rating: PropTypes.string.isRequired,
+    totalStars: PropTypes.number.isRequired,
+    className: PropTypes.string
+}
+
 export default RatingSystem;

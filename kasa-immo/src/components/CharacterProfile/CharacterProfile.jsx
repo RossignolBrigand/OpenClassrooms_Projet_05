@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import './_characterprofile.scss'
 
@@ -10,6 +11,11 @@ function CharacterProfile({ person, className }) {
             <img className={`${className}__img`} src={person.picture} alt={`Profil de ${person.name}`}></img>
         </div>
     )
+}
+
+CharacterProfile.propTypes = {
+    person: PropTypes.object.isRequired,
+    className: PropTypes.string.isRequired
 }
 
 export default CharacterProfile;

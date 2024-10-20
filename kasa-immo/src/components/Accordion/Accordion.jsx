@@ -5,6 +5,7 @@
 //-------------------------------------------------------------------------------------------------
 import React from "react";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 import './_accordion.scss';
 import ArrowIcon from "../ArrowIcon/ArrowIcon";
@@ -57,4 +58,12 @@ function Accordion({ id, title, content }) {
 
 }
 
+Accordion.propTypes = {
+    id: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    content: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.array
+    ]).isRequired
+}
 export default Accordion;

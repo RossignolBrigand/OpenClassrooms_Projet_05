@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import './_card-gallery.scss'
 
@@ -9,6 +10,10 @@ function CardGallery({ children }) {
             {children}
         </div>
     )
+}
+
+CardGallery.propTypes = {
+    children: PropTypes.array
 }
 
 export default CardGallery;
