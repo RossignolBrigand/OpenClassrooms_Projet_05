@@ -1,10 +1,12 @@
 @use '../../styles/abstracts/_mixins.scss' as mix;
+@use '../../styles/abstracts/index' as abstracts;
 
 .about {
-    @include mix.document-horizontal-margin;
+    @include abstracts.document-horizontal-margin;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 
     &__accordion-wrapper {
         display: flex;
@@ -12,5 +14,13 @@
         align-items: center;
         margin: 38px 0;
         gap: 30px;
+
+        @media screen and (max-width: abstracts.$screen-size-small) {
+
+            &:last-child {
+                margin-bottom: 100px
+            }
+
+        }
     }
 }
