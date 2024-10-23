@@ -30,6 +30,7 @@
         font-size: 2.25rem;
         font-weight: 500;
         color: var.$primary-color;
+        text-wrap: balance;
 
         @media screen and (max-width:var.$screen-size-small) {
             margin: 113px 0;
