@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import LogoIcon from "../../components/LogoIcon/LogoIcon";
 
 import './_header.scss'
@@ -13,10 +13,18 @@ function Header() {
                 <LogoIcon />
             </div>
             <nav className="navbar">
-                <Link className="navbar__navlink" to={'/'}>Accueil</Link>
-                <Link className="navbar__navlink" to={'/about'}>À propos</Link>
+                <NavLink
+                    className={({ isActive, isPending }) =>
+                        isActive ? 'navbar__navlink active' : 'navbar__navlink'
+                    }
+                    to={'/'}>Accueil</NavLink>
+                <NavLink
+                    className={({ isActive }) =>
+                        isActive ? 'navbar__navlink active' : 'navbar__navlink'
+                    }
+                    to={'/about'}>À propos</NavLink>
             </nav>
-        </header>
+        </header >
     )
 }
 
