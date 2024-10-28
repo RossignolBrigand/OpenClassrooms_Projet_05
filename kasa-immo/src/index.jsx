@@ -27,11 +27,11 @@ root.render(
     <Router>
       <Layout>
         <Routes>
-          <Route exact path='/' element={<Home />}></Route>
-          <Route path='/about' element={<About />}></Route>
-          <Route path='/logements/:id' element={<LogementPage />}></Route>
-          <Route path='/error' element={<Error />}></Route>
-          <Route path='*' element={<Navigate to='/error' />}></Route>
+          <Route exact path='/Kasa/' element={<Home />}></Route>
+          <Route path='/Kasa/about' element={<About />}></Route>
+          <Route path='/Kasa/logements/:id' element={<LogementPage />}></Route>
+          <Route path='/Kasa/error' element={<Error />}></Route>
+          <Route path='/Kasa/*' element={<Navigate to='/error' />}></Route>
         </Routes>
       </Layout>
     </Router>
