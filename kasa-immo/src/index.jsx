@@ -24,14 +24,14 @@ import Error from './pages/Error/Error';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename='/kasa'>
       <Layout>
         <Routes>
-          <Route exact path='/' element={<Home />}></Route>
+          <Route path='/home' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/logements/:id' element={<LogementPage />}></Route>
           <Route path='/error' element={<Error />}></Route>
-          <Route path='*' element={<Navigate to='/error' />}></Route>
+          <Route path='/*' element={<Navigate to='/error' />}></Route>
         </Routes>
       </Layout>
     </Router>

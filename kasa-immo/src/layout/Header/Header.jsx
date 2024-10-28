@@ -17,7 +17,7 @@ function Header() {
                     className={({ isActive, isPending }) =>
                         isActive ? 'navbar__navlink active' : 'navbar__navlink'
                     }
-                    to={'/'}>Accueil</NavLink>
+                    to={'/home'}>Accueil</NavLink>
                 <NavLink
                     className={({ isActive }) =>
                         isActive ? 'navbar__navlink active' : 'navbar__navlink'

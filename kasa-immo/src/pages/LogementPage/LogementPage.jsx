@@ -29,7 +29,7 @@ function LogementPage() {
     useEffect(() => {
         if (!logement) {
             return (
-                navigate('/Kasa/error')
+                navigate('/error')
             )
         }
     }, [logement, navigate]);

@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/OpenClassrooms_Projet_05/static/css/main.b5429e64.css",
-    "main.js": "/OpenClassrooms_Projet_05/static/js/main.e23f5af7.js",
-    "static/js/453.2a8a82c4.chunk.js": "/OpenClassrooms_Projet_05/static/js/453.2a8a82c4.chunk.js",
-    "static/media/Cover2.png": "/OpenClassrooms_Projet_05/static/media/Cover2.150ac7164d54fa4583a9.png",
-    "static/media/Cover1.png": "/OpenClassrooms_Projet_05/static/media/Cover1.47fae6981e58c8d3b05a.png",
-    "index.html": "/OpenClassrooms_Projet_05/index.html",
-    "main.b5429e64.css.map": "/OpenClassrooms_Projet_05/static/css/main.b5429e64.css.map",
-    "main.e23f5af7.js.map": "/OpenClassrooms_Projet_05/static/js/main.e23f5af7.js.map",
-    "453.2a8a82c4.chunk.js.map": "/OpenClassrooms_Projet_05/static/js/453.2a8a82c4.chunk.js.map"
+    "main.css": "/OpenClassrooms_Projet_05/kasa/home/static/css/main.b5429e64.css",
+    "main.js": "/OpenClassrooms_Projet_05/kasa/home/static/js/main.41df3b19.js",
+    "static/js/453.2a8a82c4.chunk.js": "/OpenClassrooms_Projet_05/kasa/home/static/js/453.2a8a82c4.chunk.js",
+    "static/media/Cover2.png": "/OpenClassrooms_Projet_05/kasa/home/static/media/Cover2.150ac7164d54fa4583a9.png",
+    "static/media/Cover1.png": "/OpenClassrooms_Projet_05/kasa/home/static/media/Cover1.47fae6981e58c8d3b05a.png",
+    "index.html": "/OpenClassrooms_Projet_05/kasa/home/index.html",
+    "main.b5429e64.css.map": "/OpenClassrooms_Projet_05/kasa/home/static/css/main.b5429e64.css.map",
+    "main.41df3b19.js.map": "/OpenClassrooms_Projet_05/kasa/home/static/js/main.41df3b19.js.map",
+    "453.2a8a82c4.chunk.js.map": "/OpenClassrooms_Projet_05/kasa/home/static/js/453.2a8a82c4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b5429e64.css",
-    "static/js/main.e23f5af7.js"
+    "static/js/main.41df3b19.js"
   ]
 }
