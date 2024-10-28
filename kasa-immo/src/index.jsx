@@ -31,7 +31,7 @@ root.render(
           <Route path='/about' element={<About />}></Route>
           <Route path='/logements/:id' element={<LogementPage />}></Route>
           <Route path='/error' element={<Error />}></Route>
-          <Route path='/*' element={<Navigate to='/error' />}></Route>
+          <Route path='*' element={<Navigate to='/error' />}></Route>
         </Routes>
       </Layout>
     </Router>
