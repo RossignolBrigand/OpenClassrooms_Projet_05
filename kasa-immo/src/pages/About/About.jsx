@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
 
 import Banner from "../../components/Banner/Banner";
 import imageSrc from '../../assets/covers/Cover2.png'
 import Accordion from "../../components/Accordion/Accordion";
 
-import AboutData from '../../datas/about.json'
 import './_about.scss'
 
+//--------------------------------------------------------------
+
 function About() {
+    const [Data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(`http://localhost:4200/api/about`)
+                console.log(response);
+                setData(response.data);
+                setLoading(false);
+            }
+            catch (error) {
+                setError('Failed to fetch data');
+                setLoading(false);
+            }
+        }
+        fetchData();
+    }, []);
 
     return (
         <div className="about">
@@ -16,13 +37,15 @@ function About() {
                 text={""}
             />
             <div className="about__accordion-wrapper">
-                {AboutData.map((accordion) => (
-                    <Accordion
-                        key={accordion.id}
-                        title={accordion.title}
-                        content={accordion.content}
-                    />
-                ))}
+                {loading ? (<p>Loading...</p>) : error ? (<p>{error}</p>) :
+                    Data.map((accordion) => (
+                        <Accordion
+                            key={accordion.id}
+                            title={accordion.title}
+                            content={accordion.content}
+                        />
+                    ))
+                }
             </div>
         </div>
     )

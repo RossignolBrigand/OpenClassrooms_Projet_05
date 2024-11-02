@@ -23,7 +23,7 @@ app.use(cors());
 
 // app.use('/api/auth', userRoutes);
 
-// app.use('/api/logements', logementRoutes);
+app.use('/api/logements', logementRoutes);
 
 app.use('/api/about', aboutRoutes);
 

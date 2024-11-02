@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
 
 import Banner from "../../components/Banner/Banner";
 import CardGallery from "../../components/CardGallery/CardGallery";
@@ -10,8 +11,28 @@ import imageSrc from '../../assets/covers/Cover1.png'
 import './_home.scss';
 
 function Home() {
-
     const bannerText = "Chez vous, partout et ailleurs"
+
+    const [Data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/logements`)
+                console.log(response);
+                setData(response.data);
+                setLoading(false);
+            }
+            catch (error) {
+                setError('Failed to fetch data');
+                setLoading(false);
+            }
+        }
+        fetchData();
+    }, []);
+
     return (
         <div className="home">
             <Banner
@@ -19,14 +40,15 @@ function Home() {
                 text={bannerText}
             />
             <CardGallery>
-                {LogementsData.map((logement) => (
-                    <CardItem
-                        key={`${logement.id}-${logement.title}`}
-                        id={logement.id}
-                        title={logement.title}
-                        cover={logement.cover}
-                    />
-                ))}
+                {loading ? (<p>Loading...</p>) : error ? (<p>{error}</p>) :
+                    Data.map((logement) => (
+                        <CardItem
+                            key={`${logement.id}-${logement.title}`}
+                            id={logement.id}
+                            title={logement.title}
+                            cover={logement.cover}
+                        />
+                    ))}
             </CardGallery>
         </div>
     )
