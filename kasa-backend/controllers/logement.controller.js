@@ -1,0 +1,1 @@
+const Logement = require('../models/Logement.model');
