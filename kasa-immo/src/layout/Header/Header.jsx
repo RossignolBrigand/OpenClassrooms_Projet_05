@@ -23,6 +23,11 @@ function Header() {
                         isActive ? 'navbar__navlink active' : 'navbar__navlink'
                     }
                     to={'/about'}>À propos</NavLink>
+                <NavLink
+                    className={({ isActive }) =>
+                        isActive ? 'navbar__navlink active' : 'navbar__navlink'
+                    }
+                    to={'/login'}>Login</NavLink>
             </nav>
         </header >
     )

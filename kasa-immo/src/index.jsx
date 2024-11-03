@@ -18,6 +18,7 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import LogementPage from './pages/LogementPage/LogementPage'
 import Error from './pages/Error/Error';
+import Login from './pages/Login/Login';
 
 //----------------------------------------------------------------------------
 
@@ -30,6 +31,7 @@ root.render(
           <Route exact path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/logements/:id' element={<LogementPage />}></Route>
+          <Route path='/login/' element={<Login />}></Route>
           <Route path='/error' element={<Error />}></Route>
           <Route path='*' element={<Navigate to='/error' />}></Route>
         </Routes>
