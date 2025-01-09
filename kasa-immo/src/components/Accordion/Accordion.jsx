@@ -45,7 +45,7 @@ function Accordion({ id, title, content }) {
         </div >
     ) : (
         <div className="accordion" key={id}>
-            < div className="accordion__titleBar" >
+            <div className="accordion__titleBar" >
                 <h2 className="accordion__titleBar--title">{title}</h2>
                 <div onClick={() => accordionIsOpen(true)} className="accordion__titleBar--icon">
                     <ArrowIcon
