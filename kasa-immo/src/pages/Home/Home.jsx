@@ -1,57 +1,63 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import axios from "axios";
 
 import Banner from "../../components/Banner/Banner";
 import CardGallery from "../../components/CardGallery/CardGallery";
 import CardItem from "../../components/CardItem/CardItem";
 
 import LogementsData from "../../datas/logements.json";
-import imageSrc from '../../assets/covers/Cover1.png'
+import imageSrc from "../../assets/covers/Cover1.webp";
 
-import './_home.scss';
+import "./_home.scss";
 
 function Home() {
-    const bannerText = "Chez vous, partout et ailleurs"
+  const bannerText = "Chez vous, partout et ailleurs";
 
-    const [Data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+  const [Data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(`${process.env.REACT_APP_API_URL}/logements`)
-                console.log(response);
-                setData(response.data);
-                setLoading(false);
-            }
-            catch (error) {
-                setError('Failed to fetch data');
-                setLoading(false);
-            }
-        }
-        fetchData();
-    }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_URL}/logements`
+        );
+        console.log(response);
+        setData(response.data);
+        setLoading(false);
+      } catch (error) {
+        setError("Failed to fetch data");
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
-    return (
-        <div className="home">
-            <Banner
-                imageSrc={imageSrc}
-                text={bannerText}
+  return (
+    <div className="home">
+      <Banner
+        imageSrc={imageSrc}
+        text={bannerText}
+      />
+      <CardGallery>
+        {loading ? (
+          <p>Loading...</p>
+        ) : error ? (
+          <p>{error}</p>
+        ) : (
+          Data.map((logement) => (
+            <CardItem
+              key={`${logement.id}-${logement.title}`}
+              id={logement.id}
+              title={logement.title}
+              cover={logement.cover}
             />
-            <CardGallery>
-                {loading ? (<p>Loading...</p>) : error ? (<p>{error}</p>) :
-                    Data.map((logement) => (
-                        <CardItem
-                            key={`${logement.id}-${logement.title}`}
-                            id={logement.id}
-                            title={logement.title}
-                            cover={logement.cover}
-                        />
-                    ))}
-            </CardGallery>
-        </div>
-    )
+          ))
+        )}
+      </CardGallery>
+    </div>
+  );
 }
 
 export default Home;
