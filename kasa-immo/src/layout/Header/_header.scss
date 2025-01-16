@@ -1,56 +1,56 @@
-@use '../../styles/abstracts/variables' as var;
-@use '../../styles/abstracts/mixins' as mix;
+@use "../../styles/abstracts/variables" as var;
+@use "../../styles/abstracts/mixins" as mix;
 
 .header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 45px;
-    margin-bottom: 50px;
-    @include mix.document-horizontal-margin;
-    justify-content: space-between;
-    align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 45px;
+	margin-bottom: 50px;
+	@include mix.document-horizontal-margin;
+	justify-content: space-between;
+	align-items: center;
 
-    @media screen and (max-width:var.$screen-size-small) {
-        margin-top: 20px;
-        margin-bottom: 27px;
-
-    }
+	@media screen and (max-width: var.$screen-size-small) {
+		margin-top: 20px;
+		margin-bottom: 27px;
+	}
 }
 
 .logoIcon {
-    fill: var.$primary-color;
+	fill: var.$primary-color;
 
-    @media screen and (max-width:var.$screen-size-small) {
-        width: 100%;
-    }
+	@media screen and (max-width: var.$screen-size-small) {
+		width: 100%;
+	}
 }
 
 .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
+	display: flex;
+	flex-direction: row;
+	justify-content: end;
 
-    &__navlink {
-        padding-left: 60px;
-        font-weight: 500;
-        font-size: 1.5em;
+	&__navlink {
+		padding-left: 60px;
+		font-weight: 500;
+		font-size: 1.5em;
+		transition: text-decoration 100ms ease-in;
 
-        &.active {
-            text-decoration: underline 2px solid black;
-        }
+		@media screen and (max-width: var.$screen-size-small) {
+			padding-left: 1rem;
+			font-size: 0.75rem;
+			text-transform: uppercase;
+		}
 
-        @media screen and (max-width: var.$screen-size-small) {
-            padding-left: 1rem;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-        }
+		&.active {
+			text-decoration: underline 2px solid black;
+		}
 
-        &:hover {
-            text-decoration: underline 2px;
+		&:hover {
+			text-decoration: underline 2px;
 
-            @media screen and (max-width: var.$screen-size-small) {
-                text-decoration: underline 1px;
-            }
-        }
-    }
+			@media screen and (max-width: var.$screen-size-small) {
+				text-decoration: underline 1px;
+			}
+		}
+	}
 }
